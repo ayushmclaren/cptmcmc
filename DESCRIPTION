@@ -1,0 +1,19 @@
+Package: cptmcmc
+Type: Package
+Title: Change-point Detection for MCMC
+Version: 0.1.0
+Author: Ayush Agarwal [aut, cre], Dootika Vats [aut, cre]
+Maintainer: Ayush Agarwal<ayush.agarwal50@gmail.com>
+Description: Implements change-point detection algorithm specifically designed for MCMC to identify a burn-in period for univariate or multivariate Markov chains.
+License: GPL-3
+Imports: 
+    MCMCpack,
+    Rcpp,
+    mvtnorm
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+LinkingTo: 
+    Rcpp
+Depends: 
+    R (>= 2.10)
