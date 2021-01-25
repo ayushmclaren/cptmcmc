@@ -1,2 +1,8 @@
-# cptmcmc
-Change-point algorithm to find burn-in period in alpha-mixing chains 
+# cptmcmc : R package
+Summary : Change-point algorithm to find burn-in period in alpha-mixing chains
+
+## Introduction
+
+It is often difficult to come across independent and identically distributed random samples. More often that not, we require specialised sampling techniques and obtain dependent samples, which in turn are used to estimate the true statistics. In this paper, we look at the class of Markov chain Monte Carlo (MCMC) methods. Since we are using sample statistics as an estimate, it is essential that the samples are representative of the true underlying distribution. In case of Markov chains, if we are unable to sample from stationarity, the estimators will likely suffer from convergence problems. Consequently a bias in the sample will lead to inaccurate estimates. To address this problem, it is a common practice to discard a *fraction* of the chain from the start called the "burn-in" period. However, in practice the said *fraction* is often arbitrary, wastes samples and cause inefficiency. Most methods in literature are either parametric, assume stationarity or identify the most significant change-point rather than the first significant one.
+
+We propose a novel change-point algorithm for the Markov chain Monte Carlo setup. In particular, we show how procedures based on the cumulative sum, CUSUM, statistics can be modified to work for data exhibiting serial dependence such as a Markov Chain. This allows us to find mean structural breaks under a non-parametric framework, without any strong assumptions on the underlying distribution. We argue that this helps us identify the ideal "burn-in" period for the chain, and subsequently improves the MCMC estimates. 
